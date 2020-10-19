@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main(){
+	int a,i,s, res[100],x[100],y[100],z[100];
+	printf("Masukan Jumlah Kotak\n");
+	scanf("%d",&a);
+	if (a<=100){
+		for(i=1;i<=a;i++){
+			printf("Masukan ke-%d\nP L T\n",i);
+			scanf("%d %d %d",&x[i],&y[i],&z[i]);
+		}
+		for(s=1;s<=a;s++){
+			if (z[s]<41 && x[s]<=100 && y[s]<=100 && x[s]*y[s]*z[s]>0){
+				res[s]=x[s]*y[s]*z[s];
+				printf("Luas Kotak ke-%d adalah %d\n",s,res[s]);
+				}
+			else
+				printf("Kotak ke-%d error\n",s);
+		}
+	}
+	else 
+		printf("%d kotak overload",a);	
+}
