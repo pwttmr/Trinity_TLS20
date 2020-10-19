@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int hitung();
+int main()
+{
+    printf("PROGRAM PENGHITUNG IP SATU MATA KULIAH\n\n");
+	float quiz, tugas, ujian, ip;
+	printf("QUIZ (skala/100)\n");
+	quiz=hitung ();
+	printf("TUGAS (skala/100)\n");
+	tugas=hitung ();
+	printf("UJIAN (skala/100)\n");
+	ujian=hitung ();
+	ip=(0.2*quiz+0.3*tugas+0.5*ujian)/25;
+	printf("rerata: quiz=%.2f, tugas=%.2f, ujian=%.2f\n", quiz, tugas, ujian);
+	printf("IP Anda: %.2f\n", ip);
+	if (ip>=2)
+	if (ip>=3.5)
+	printf ("LULUS dengan predikat CUMLAUDE");
+	else
+	printf("LULUS");
+	else
+	printf("TIDAK LULUS");
+	printf("\n");
+	return 0;
+}
+int hitung ()
+{
+	int i=0;
+	float input, total=0, result;
+	printf("catatan: masukkan -1 untuk melanjutkan tahap berikutnya\n");
+	do
+		{
+		printf("nilai_%d\n",i+1);
+		scanf("%f", &input);
+		if (input!=-1)
+		{
+			total+=input;
+			i++;
+		}
+		}
+    while(input!=-1);
+    printf("\n");
+    result = total/i;
+    return result;
+}
