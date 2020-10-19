@@ -1,0 +1,22 @@
+#include <stdio.h>
+int  main()
+{
+	int x1, x2, v1, v2, cakap;
+	printf("masukkan posisi awal katak 1 (x1), lompatan katak 1 (v1), posisi awal katak 2 (x2), dan lompatan katak 2 (v2)\nnote: semua bilangan bulat dan v1, v2 > 0\nformat: x1 (space) v1 (space) x2 (space) v2\n");
+	scanf("%d %d %d %d", &x1, &v1, &x2, &v2);
+	if (x1==x2)
+	cakap=1;
+	else
+		if ((x1>x2 && v2>v1) || (x2>x1 && v1>v2))
+		if ((x1-x2)%(v1-v2)==0)
+		cakap=1;
+		else
+		cakap=0;
+		else
+		cakap=0;
+	if (cakap==1)
+	printf ("YES");
+	else
+	printf ("NO");
+	return 0;
+}
